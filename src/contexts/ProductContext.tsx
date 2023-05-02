@@ -12,7 +12,7 @@ const ProductProvider = ({ children } : ProductProviderProps) => {
       const response = await fetch('https://fakestoreapi.com/products');
       const data = await response.json();
       const processedData = await data.filter((item : object) => {
-        return item.category === "men's clothing" || item.category === "women's clothing"
+        return item.category !== "electronics"
       });
       setProducts(processedData);
     }
@@ -20,7 +20,7 @@ const ProductProvider = ({ children } : ProductProviderProps) => {
   }, [])
   
   return (
-    <ProductContext.Provider value={products}>{ children }</ProductContext.Provider>
+    <ProductContext.Provider value={{products}}>{ children }</ProductContext.Provider>
   )
 }
 
