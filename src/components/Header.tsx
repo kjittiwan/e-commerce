@@ -2,12 +2,16 @@ import { useContext } from "react";
 import { SidebarContext } from "../contexts/SidebarContext";
 import { BsCart3 } from 'react-icons/bs'
 import { CartContext } from "../contexts/CartContext";
+import { Link } from "../../node_modules/react-router-dom/dist/index";
 function Header() {
   const { isOpen, setIsOpen, handleClose } = useContext(SidebarContext)
   const { cartAmount } = useContext(CartContext)
   return (
     <div className=" flex justify-between items-center px-6 py-6 border-b drop-shadow-lg">
-      <div>Header</div>
+      <Link to={'/'}>
+        <div>Header</div>
+      </Link>
+      
       <div>
         <div onClick={() => setIsOpen(true)} className='text-4xl relative'>
           <BsCart3 />
