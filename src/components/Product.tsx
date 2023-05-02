@@ -24,12 +24,12 @@ function Product( {product } : ProductProps) {
           </Link>
           <div className="absolute top-6 -right-11 group-hover:right-6 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-all">
             <button>
-              <div className="bg-zinc-900 flex justify-center items-center h-12 w-12 border-b drop-shadow-lg">
+              <div className="bg-zinc-900 flex justify-center items-center h-12 w-12 border-b drop-shadow-lg hover:scale-110 transition active:translate-y-1">
                 <BsPlus onClick={() => addToCart(product, id)} className='text-3xl text-white'/>
               </div>
             </button>
             <Link to={`/product/${id}`}>
-              <div className="bg-white flex justify-center items-center h-12 w-12 border-b drop-shadow-lg ">
+              <div className="bg-white flex justify-center items-center h-12 w-12 border-b drop-shadow-lg hover:scale-110 transition active:translate-y-1 ">
                 <BsEyeFill className='text-xl'/>
               </div>
             </Link> 
