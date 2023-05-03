@@ -1,24 +1,26 @@
-import heroImg from '../images/hero.jpg'
 import { Link } from '../../node_modules/react-router-dom/dist/index';
 import { IoMdArrowForward } from "react-icons/io"
 function Hero() {
   return (
-    <section className=" bg-[#fcf2e9]  h-[100vh] flex flex-col justify-between ">
+    <section className="bg-[#fcf2e9] h-[600px] md:h-[100vh] flex flex-col justify-between">
       <div className='uppercase flex justify-center items-center py-2 mb-16'>Free shipping on orders of $50+</div>
-      <div className='h-full  flex items-end'>
-        <div style={{backgroundImage: `url(${heroImg})`}} className='h-[100%] w-[45%] bg-cover'>
+      <div className='h-full  flex items-end '>
+        <div  className='h-full w-[45%] md:bg-hero md:bg-cover md:block hidden '>
         </div>
-        <div className='flex flex-col px-28 justify-start h-full w-[55%]  pt-32'>
-          <div>
-            <div className='flex items-center font-semibold uppercase justify-start'>
-              <div className='w-10 h-[2px] bg-red-600 mr-3'></div>Why wait ?
+        <div className='flex flex-col px-10 md:px-28 justify-center h-full w-full md:w-[55%] pt-2  bg-hero bg-cover bg-fixed md:bg-none'>
+          <div className=''>
+            <div className=' bg-white bg-opacity-60 md:bg-[#ff7700]  md:bg-opacity-5 p-10 flex flex-col'>
+              <div className='flex items-center font-semibold uppercase justify-start'>
+                <div className='w-10 h-[2px] bg-red-600 mr-3'></div>Why wait ?
+              </div>
+              <div className=' uppercase font-light text-[50px] md:text-[65px] '>Discover <br/>your unique <br/><span className='font-bold'>Style</span></div>
+              <Link to={'/'} className='uppercase font-semibold  hover:scale-105 flex items-center w-fit border-b-2 border-black'>
+                <div className=''>Discover more</div>
+                <IoMdArrowForward className='ml-2' />
+              </Link>        
             </div>
-            <div className=' uppercase font-light text-[65px] '>Discover <br/>your unique <br/><span className='font-bold'>Style</span></div>
-            <Link to={'/'} className='uppercase font-semibold  hover:scale-105 flex items-center w-fit border-b-2 border-black'>
-              <div className=''>Discover more</div>
-              <IoMdArrowForward className='ml-2' />
-            </Link>        
           </div>
+          
          
         </div>
       </div>
