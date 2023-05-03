@@ -23,7 +23,7 @@ function CartItem( { product }) {
             
             <div className="flex justify-between items-center">
               <div className="flex gap-x-4 border px-3 max-w-[100px]">
-                <button onClick={() => decreaseAmount(id)} className="flex items-center cursor-pointer hover:scale-125 transition active:translate-y-1 ">
+                <button onClick={() => decreaseAmount(id)} className="flex items-center cursor-pointer hover:scale-125 transition active:translate-y-1">
                   <IoMdRemove />
                 </button>
                 <div className="flex items-center">

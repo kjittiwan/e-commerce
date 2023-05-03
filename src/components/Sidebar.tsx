@@ -18,7 +18,7 @@ function Sidebar() {
       </div>
       <div className="w-full flex flex-col overflow-y-auto overflow-x-hidden gap-y-2 h-[65%] border-b">
         {cart.map((product) => {
-          return < CartItem product={product} />
+          return < CartItem key={product.id} product={product} />
         })}
       </div>
       <div className="flex flex-col gap-y-3 flex-1 justify-center ">

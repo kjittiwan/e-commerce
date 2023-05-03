@@ -1,18 +1,36 @@
 import { createContext, useState, useEffect } from "react";
 
 type CartProviderProps = {
-  children: React.ReactNode,
+  children: React.ReactNode
 }
-export const CartContext = createContext();
+type CartContext = {
+  addToCart: (product: CartType, id: number) => void
+  removeFromCart: (id: number) => void
+  decreaseAmount: (id: number) => void
+  getCartAmount: () => void
+  getTotal: () => void
+}
+type CartType = {
+  category: string
+  description: string
+  id: number
+  image: string
+  price: number
+  title: string
+  amount: number
+}
+
+export const CartContext = createContext({} as CartContext);
 const CartProvider = ({ children } : CartProviderProps) => {
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState<CartType[]>([])
   const [cartAmount, setCartAmount] = useState(0)
   const [total, setTotal] = useState(0)
   useEffect(() => {
     getCartAmount()
     getTotal()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[cart])
-  const addToCart = (product, id) => {
+  const addToCart = (product : CartType, id : number) => {
     const cartItem = cart.find((item) => {
       return item.id === id
     })
@@ -31,13 +49,13 @@ const CartProvider = ({ children } : CartProviderProps) => {
       })
     }
   }
-  const removeFromCart = (id) => {
+  const removeFromCart = (id : number) => {
     const newCart = [...cart].filter(item => {
       return item.id !== id
     })
     setCart(newCart) 
   }
-  const decreaseAmount = (id) => {
+  const decreaseAmount = (id : number) => {
     const cartItem = cart.find((item) => {
       return item.id === id
     })
