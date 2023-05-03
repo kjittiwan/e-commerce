@@ -1,7 +1,7 @@
 function Hero() {
   return (
     <div>
-      hero
+      HERO
     </div>
   );
 }

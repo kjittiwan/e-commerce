@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import Product from "../components/Product";
 import { ProductContext } from "../contexts/ProductContext";
-
+import Hero from "../components/Hero";
 function Home() {
   const {products}  = useContext(ProductContext)
   useEffect(() => {

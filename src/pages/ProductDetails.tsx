@@ -19,10 +19,10 @@ function ProductDetails() {
         <div>
           <img src={image} alt={title} className='max-w-[200px]  lg:max-w-sm mb-4' />
         </div>
-        <div className=" flex flex-col  text-center lg:text-left gap-y-3 lg:gap-y-6 mx-auto">
-          <h1 className="text-3xl font-medium max-w-[400px] lg:max-w-[450px] ">{title}</h1>
+        <div className=" flex flex-col text-center lg:text-left gap-y-3 lg:gap-y-6 mx-auto max-w-[300px] sm-max-w-[100px] md:max-w-[400px]  lg:max-w-[450px] ">
+          <h1 className="text-3xl font-medium">{title}</h1>
           <div className="text-xl font-medium text-red-500">$ {price}</div>
-          <div className="text-md font-light max-w-[400px] lg:max-w-[550px] mb-1">{description}</div>
+          <div className="text-md font-light md:max-w-[400px] lg:max-w-[550px] mb-1 ">{description}</div>
           <div className="h-full">
             <button onClick={() => addToCart(product, product.id)} className="bg-zinc-900 text-white p-3 rounded-sm font-semibold text-lg ">Add to cart</button>
           </div>    
