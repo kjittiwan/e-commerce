@@ -30,8 +30,8 @@ function Sidebar() {
             <BsTrash />
           </button>
         </div>
-        <Link to={'/'} className='bg-gray-300 py-3 rounded-sm flex justify-center items-center font-semibold text-lg'>Continue shopping</Link>
-        <Link to={'/'} className='bg-black text-white py-3 rounded-sm flex justify-center items-center font-semibold text-lg'>Checkout</Link>
+        <Link to={'/'} onClick={handleClose} className='bg-gray-300 py-3 rounded-sm flex justify-center items-center font-semibold text-lg'>Continue shopping</Link>
+        <Link to={'/'} onClick={handleClose} className='bg-black text-white py-3 rounded-sm flex justify-center items-center font-semibold text-lg'>Checkout</Link>
 
       </div>
       
