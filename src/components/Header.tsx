@@ -10,7 +10,6 @@ function Header() {
   const { cartAmount } = useContext(CartContext)
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      console.log(window.scrollY)
       window.scrollY > 570 ? setIsSticky(true) : setIsSticky(false)
     })
   })
