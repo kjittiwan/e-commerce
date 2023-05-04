@@ -5,7 +5,7 @@ import Hero from "../components/Hero";
 import { IoMdArrowForward } from "react-icons/io"
 import { Link } from "../../node_modules/react-router-dom/dist/index";
 function Home() {
-  const {products}  = useContext(ProductContext)
+  const {products, filterProducts}  = useContext(ProductContext)
   return (
     <div>
       <Hero />
@@ -76,7 +76,20 @@ function Home() {
           <div className=" mt-16 bg-stand bg-cover bg-center  h-full w-[40%]"></div>
         </div>
       </div>
-
+      <div className=" pt-12 pb-20">
+        <div className="flex flex-col md:flex-row gap-4 h-full w-full px-10">
+          <Link to={'/products'} onClick={() => filterProducts("men's clothing")} className="bg-men h-[580px] w-full md:w-1/3 bg-cover text-white flex  justify-center font-semibold text-[50px] items-end pb-10">
+            <div className=" underline decoration-3 decoration underline-offset-8">MEN</div>
+          </Link>
+          <Link to={'/products'} onClick={() => filterProducts("women's clothing")} className="bg-women h-[580px] w-full md:w-1/3 bg-cover text-white flex  justify-center font-semibold text-[50px] items-end pb-10">
+            <div className="underline decoration-3 decoration underline-offset-8">WOMEN</div>
+          </Link>
+          <Link to={'/products'} onClick={() => filterProducts("jewelery")} className="bg-jewelry h-[580px] w-full md:w-1/3 bg-cover text-white flex  justify-center font-semibold text-[50px] items-end pb-10">
+            <div className="underline decoration-3 decoration underline-offset-8">JEWELRY</div>
+          </Link>
+        
+        </div>
+      </div>
          
     </div>
     

@@ -3,7 +3,6 @@ import { SidebarContext } from "../contexts/SidebarContext";
 import { BsCart3 } from 'react-icons/bs'
 import { CartContext } from "../contexts/CartContext";
 import { Link } from "../../node_modules/react-router-dom/dist/index";
-import Logo from '../images/logo.png'
 function Header() {
   const [isSticky, setIsSticky] = useState(false)
   const { setIsOpen } = useContext(SidebarContext)

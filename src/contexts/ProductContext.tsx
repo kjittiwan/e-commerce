@@ -27,9 +27,24 @@ const ProductProvider = ({ children } : ProductProviderProps) => {
     }
     fetchProducts()
   }, [])
+
+  const [filteredProducts, setFilteredProducts] = useState([])
+ 
+  
+  function filterProducts(category: string) {
+    if (category === "all") {
+      setFilteredProducts([...products])
+    }
+    else {
+      const updatedProducts = [...products].filter(product => {
+        return product.category === category
+      })
+      setFilteredProducts(updatedProducts)
+    }
+  }
   
   return (
-    <ProductContext.Provider value={{products}}>{ children }</ProductContext.Provider>
+    <ProductContext.Provider value={{products, filteredProducts, setFilteredProducts, filterProducts}}>{ children }</ProductContext.Provider>
   )
 }
 

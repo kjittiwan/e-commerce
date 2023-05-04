@@ -3,11 +3,11 @@ import Product from "../components/Product";
 import { ProductContext } from "../contexts/ProductContext";
 
 function ProductsPage() {
-  const {products}  = useContext(ProductContext)
-  useEffect(() => {
-    setFilteredProducts([...products])
-  },[products])
-  const [filteredProducts, setFilteredProducts] = useState([])
+  const {products, filteredProducts, setFilteredProducts, filterProducts}  = useContext(ProductContext)
+  // useEffect(() => {
+  //   setFilteredProducts([...products])
+  // },[products])
+  
   function setActiveBtn(btn) {
     const buttons = document.querySelectorAll('button');
     buttons.forEach((button) => {
@@ -15,6 +15,7 @@ function ProductsPage() {
     });
     btn.classList.add('active');
   }
+
   function handleClick(e) {
     if (e.target.classList.contains('active')) {
       return
@@ -22,19 +23,6 @@ function ProductsPage() {
       setActiveBtn(e.target)
     }   
   }
-  function filterProducts(category: string) {
-    if (category === "all") {
-      setFilteredProducts([...products])
-    }
-    else {
-      const updatedProducts = [...products].filter(product => {
-        return product.category === category
-      })
-      setFilteredProducts(updatedProducts)
-    }
-  }
-
-
  
   return (
     <div className="pt-16">

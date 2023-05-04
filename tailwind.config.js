@@ -12,7 +12,10 @@ export default {
         'coat':  "url('./src/images/coat.jpg')",
         'jacket':  "url('./src/images/jacket.jpg')",
         'stand':  "url('./src/images/stand.jpg')",
-        'sit':  "url('./src/images/sit.jpg')"
+        'sit':  "url('./src/images/sit.jpg')",
+        'men':  "url('./src/images/men.png')",
+        'women':  "url('./src/images/women.png')",
+        'jewelry':  "url('./src/images/jewelry.png')"
       }
     },
   },
