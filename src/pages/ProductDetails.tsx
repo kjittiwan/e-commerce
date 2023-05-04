@@ -15,7 +15,7 @@ function ProductDetails() {
   const { image, title, description, price } = product
   return (
     <div className="py-24  h-full flex justify-center items-center ">
-      <div className=" flex mx-auto flex-col lg:flex-row  items-center lg:gap-x-40">
+      <div className=" flex mx-auto flex-col lg:flex-row  items-center lg:gap-x-40 pt-20">
         <div>
           <img src={image} alt={title} className='max-w-[200px]  lg:max-w-sm mb-4' />
         </div>

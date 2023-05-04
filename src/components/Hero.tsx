@@ -3,7 +3,7 @@ import { IoMdArrowForward } from "react-icons/io"
 function Hero() {
   return (
     <section className="bg-[#fcf2e9] h-[600px] md:h-[100vh] flex flex-col justify-between">
-      <div className='uppercase flex justify-center items-center py-2 mb-16'>Free shipping on orders of $50+</div>
+      <div className='uppercase flex justify-center items-center text-sm mb-14'>Free shipping on orders of $50+</div>
       <div className='h-full  flex items-end '>
         <div  className='h-full w-[45%] md:bg-hero md:bg-cover md:block hidden '>
         </div>
@@ -14,8 +14,8 @@ function Hero() {
                 <div className='w-10 h-[2px] bg-red-600 mr-3'></div>Why wait ?
               </div>
               <div className=' uppercase font-light text-[50px] md:text-[65px] '>Discover <br/>your unique <br/><span className='font-bold'>Style</span></div>
-              <Link to={'/'} className='uppercase font-semibold  hover:scale-105 flex items-center w-fit border-b-2 border-black'>
-                <div className=''>Discover more</div>
+              <Link to={'/products'} className='uppercase font-bold  hover:scale-105 flex items-center w-fit border-b-2 border-black self-end'>
+                <div className=''>Shop now</div>
                 <IoMdArrowForward className='ml-2' />
               </Link>        
             </div>
