@@ -1,11 +1,11 @@
 import { Link } from '../../node_modules/react-router-dom/dist/index';
 import { IoMdArrowForward } from "react-icons/io"
+import heroImg from '../images/hero.jpg'
 function Hero() {
   return (
-    <section className="bg-[#fcf2e9] h-[600px] md:h-[100vh] flex flex-col justify-between">
-      <div className='uppercase flex justify-center items-center text-sm mb-14'>Free shipping on orders of $50+</div>
+    <section className="bg-[#fcf2e9] h-[600px] md:h-[100vh] flex flex-col justify-between box-border">
       <div className='h-full  flex items-end '>
-        <div  className='h-full w-[45%] md:bg-hero md:bg-cover md:block hidden '>
+        <div  className='h-full w-[45%] flex-1 bg-hero bg-cover'>
         </div>
         <div className='flex flex-col px-10 md:px-28 justify-center h-full w-full md:w-[55%] pt-2  bg-hero bg-cover bg-fixed md:bg-none'>
           <div className=''>
