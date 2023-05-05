@@ -24,12 +24,13 @@ const ProductProvider = ({ children } : ProductProviderProps) => {
         return item.category !== "electronics"
       });
       setProducts(processedData);
+      setFilteredProducts(processedData)
     }
     fetchProducts()
   }, [])
 
   const [filteredProducts, setFilteredProducts] = useState([])
- 
+  const [currentFilter, setCurrentFilter] = useState('all')
   
   function filterProducts(category: string) {
     if (category === "all") {
@@ -44,7 +45,7 @@ const ProductProvider = ({ children } : ProductProviderProps) => {
   }
   
   return (
-    <ProductContext.Provider value={{products, filteredProducts, setFilteredProducts, filterProducts}}>{ children }</ProductContext.Provider>
+    <ProductContext.Provider value={{products, filteredProducts, setFilteredProducts, filterProducts, currentFilter, setCurrentFilter}}>{ children }</ProductContext.Provider>
   )
 }
 

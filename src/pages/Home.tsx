@@ -5,7 +5,8 @@ import Hero from "../components/Hero";
 import { IoMdArrowForward } from "react-icons/io"
 import { Link } from "../../node_modules/react-router-dom/dist/index";
 function Home() {
-  const {products, filterProducts}  = useContext(ProductContext)
+  const {products, filterProducts, setCurrentFilter, handleFilter}  = useContext(ProductContext)
+  
   return (
     <div>
       <Hero />
@@ -54,7 +55,7 @@ function Home() {
             What we do
           </div>
           <div className="text-md md:text-xl w-full  md:w-[55%] font-light  text-center">
-          Cleo is a gender neutral clothing brand that celebrates self-expression and individuality. Our brand was founded on the belief that fashion should not be limited by traditional gender norms.<span className="inline md:hidden"> We believe that everyone should have access to high-quality, stylish clothing that reflects their unique personality.</span>
+          Cleo is a gender neutral clothing brand that celebrates <span className='font-semibold'>self-expression</span> and <span className='font-semibold'>individuality</span>. Our brand was founded on the belief that fashion should not be limited by traditional gender norms.<span className="inline md:hidden"> We believe that everyone should have access to high-quality, stylish clothing that reflects their <span className="font-semibold">unique personality</span>.</span>
           </div>
           <Link to={'/products'} className='uppercase font-semibold  hover:scale-105 flex items-center w-fit border-b-2 border-black self-center text-md md:hidden mt-4'>
                 <div className=''>Learn more</div>
@@ -65,7 +66,7 @@ function Home() {
           <div className="h-full w-[35%] flex flex-col gap-y-10">
             <div className="bg-sit bg-cover bg-center h-[60%] flex-1"></div>
             <div className="text-xl font-light w-[75%] text-center self-center">
-              We believe that everyone should have access to high-quality, stylish clothing that reflects their unique personality.
+              We believe that everyone should have access to high-quality, stylish clothing that reflects their <span className='font-semibold'>unique personality</span>.
             </div>
             <Link to={'/products'} className='uppercase font-semibold  hover:scale-105 flex items-center w-fit border-b-2 border-black self-center text-xl'>
                 <div className=''>Learn more</div>
@@ -78,13 +79,13 @@ function Home() {
       </div>
       <div className=" pt-12 pb-20">
         <div className="flex flex-col md:flex-row gap-4 h-full w-full px-10">
-          <Link to={'/products'} onClick={() => filterProducts("men's clothing")} className="bg-men h-[580px] w-full md:w-1/3 bg-cover text-white flex  justify-center font-semibold text-[50px] items-end pb-10">
+          <Link to={'/products'} onClick={() => setCurrentFilter("men's clothing")} className="bg-men h-[580px] w-full md:w-1/3 bg-cover text-white flex  justify-center font-semibold text-[50px] items-end pb-10 hover:scale-105 transition-all duration-300">
             <div className=" underline decoration-3 decoration underline-offset-8">MEN</div>
           </Link>
-          <Link to={'/products'} onClick={() => filterProducts("women's clothing")} className="bg-women h-[580px] w-full md:w-1/3 bg-cover text-white flex  justify-center font-semibold text-[50px] items-end pb-10">
+          <Link to={'/products'} onClick={() => setCurrentFilter("women's clothing")} className="bg-women h-[580px] w-full md:w-1/3 bg-cover text-white flex  justify-center font-semibold text-[50px] items-end pb-10 hover:scale-105 transition-all duration-300">
             <div className="underline decoration-3 decoration underline-offset-8">WOMEN</div>
           </Link>
-          <Link to={'/products'} onClick={() => filterProducts("jewelery")} className="bg-jewelry h-[580px] w-full md:w-1/3 bg-cover text-white flex  justify-center font-semibold text-[50px] items-end pb-10">
+          <Link to={'/products'} onClick={() => setCurrentFilter("jewelery")} className="bg-jewelry h-[580px] w-full md:w-1/3 bg-cover text-white flex  justify-center font-semibold text-[50px] items-end pb-10 hover:scale-105 transition-all duration-300">
             <div className="underline decoration-3 decoration underline-offset-8">JEWELRY</div>
           </Link>
         

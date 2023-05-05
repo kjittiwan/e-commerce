@@ -3,10 +3,12 @@ import { SidebarContext } from "../contexts/SidebarContext";
 import { BsCart3 } from 'react-icons/bs'
 import { CartContext } from "../contexts/CartContext";
 import { Link } from "../../node_modules/react-router-dom/dist/index";
+import { ProductContext } from "../contexts/ProductContext";
 function Header() {
   const [isSticky, setIsSticky] = useState(false)
   const { setIsOpen } = useContext(SidebarContext)
   const { cartAmount } = useContext(CartContext)
+  const { filterProducts } = useContext(ProductContext)
   useEffect(() => {
     window.addEventListener('scroll', () => {
       window.scrollY > 570 ? setIsSticky(true) : setIsSticky(false)
@@ -18,7 +20,7 @@ function Header() {
       CLEO
       </Link>
       <div className="flex items-center gap-x-5">
-        <Link to={'/products'}>Buy products</Link>
+        <Link to={'/products'} onClick={() => filterProducts('all')}>Buy products</Link>
         <div onClick={() => setIsOpen(true)} className=' text-3xl relative hover:scale-110 transition active:translate-y-1'>
           <BsCart3 />
           <div className={`${cartAmount === 0 ? 'opacity-0' : 'opacity-100'} bg-[#FF0100] flex justify-center items-center w-4 h-4  rounded-full text-xs text-white absolute -top-1.5  -right-2`}>{cartAmount}</div>  
