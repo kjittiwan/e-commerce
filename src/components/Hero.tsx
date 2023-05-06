@@ -7,7 +7,7 @@ function Hero() {
       <div className='h-full  flex items-end '>
         <div  className='h-full w-[45%] flex-1 bg-hero bg-cover'>
         </div>
-        <div className='flex flex-col px-10 md:px-28 justify-center h-full w-full md:w-[55%] pt-2  bg-hero bg-cover bg-fixed md:bg-none'>
+        <div className='flex flex-col px-10 md:px-28 justify-center h-full w-full md:w-[55%] pt-20  bg-hero bg-cover bg-fixed md:bg-none'>
           <div className=''>
             <div className=' bg-white bg-opacity-60 md:bg-[#ff7700]  md:bg-opacity-5 p-10 flex flex-col'>
               <div className='flex items-center font-semibold uppercase justify-start'>
