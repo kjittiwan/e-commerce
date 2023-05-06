@@ -15,7 +15,8 @@ export default {
         'sit':  "url('./src/images/sit.jpg')",
         'men':  "url('./src/images/men.png')",
         'women':  "url('./src/images/women.png')",
-        'jewelry':  "url('./src/images/jewelry.png')"
+        'jewelry':  "url('./src/images/jewelry.png')",
+        'store':  "url('./src/images/store.jpg')"
       }
     },
   },
