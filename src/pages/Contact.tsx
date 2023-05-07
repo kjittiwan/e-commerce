@@ -7,11 +7,11 @@ function Contact() {
       <div className='flex flex-col items-center gap-y-6 pt-10'>
         <div className="uppercase text-3xl">Get in touch with us</div>
         <div className="text-xl font-light text-gray-500">We're here to help! Contact us by clicking these links or filling out the form below</div>
-        <div className='flex gap-x-4 text-3xl text-black pt-4'>
-          <div> <FiPhoneCall /> </div>
-          <div> <BsFacebook /> </div>
-          <div> <BsInstagram/> </div>
-          <div> <BsLine /> </div>
+        <div className='flex gap-x-8 text-3xl text-black pt-3'>
+          <div className='cursor-pointer'> <FiPhoneCall /> </div>
+          <div className='cursor-pointer'> <BsFacebook /> </div>
+          <div className='cursor-pointer'> <BsInstagram/> </div>
+          <div className='cursor-pointer'> <BsLine /> </div>
         </div>
       </div>
       <form action="" className='flex flex-col  w-[500px] gap-y-6 border p-4 border-zinc-500 text-slate-700'>
