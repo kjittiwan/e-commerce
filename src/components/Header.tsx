@@ -26,9 +26,9 @@ function Header() {
         <Link to={'/products'} onClick={() => setCurrentFilter("all")}>All products</Link>
       </div>
       
-      <div className="flex items-center gap-x-4 ml-auto">
-        <div className="font-light">Sign in</div>
-        <Link to={'/about'} className='font-light' >About</Link>
+      <div className="flex items-center gap-x-4 ml-auto font-light">
+        <Link to={'/contact'}>Contact</Link>
+        <Link to={'/about'}>About</Link>
         <div onClick={() => setIsOpen(true)} className=' text-2xl relative hover:scale-110 transition active:translate-y-1'>
           <BsCart3 />
           <div className={`${cartAmount === 0 ? 'opacity-0' : 'opacity-100'} bg-[#FF0100] flex justify-center items-center w-3.5 h-3.5 rounded-full text-xs text-white absolute -top-1.5  -right-2`}>{cartAmount}</div>  
