@@ -3,10 +3,10 @@ import { FiPhoneCall } from 'react-icons/fi'
 
 function Contact() {
   return (
-    <div className="pt-24 pb-16 mx-16 flex flex-col items-center gap-y-10">
+    <div className="pt-24 pb-16 mx-6 md:mx-16 flex flex-col items-center gap-y-10">
       <div className='flex flex-col items-center gap-y-6 pt-10'>
-        <div className="uppercase text-3xl">Get in touch with us</div>
-        <div className="text-xl font-light text-gray-500">We're here to help! Contact us by clicking these links or filling out the form below</div>
+        <div className="uppercase text-2xl md:text-3xl">Get in touch with us</div>
+        <div className="text-center md:text-xl font-light text-gray-500">We're here to help! Contact us by clicking these links or filling out the form below</div>
         <div className='flex gap-x-8 text-3xl text-black pt-3'>
           <div className='cursor-pointer'> <FiPhoneCall /> </div>
           <div className='cursor-pointer'> <BsFacebook /> </div>
@@ -14,7 +14,7 @@ function Contact() {
           <div className='cursor-pointer'> <BsLine /> </div>
         </div>
       </div>
-      <form action="" className='flex flex-col  w-[500px] gap-y-6 border p-4 border-zinc-500 text-slate-700'>
+      <form action="" className='flex flex-col  w-full md:w-[40%] gap-y-6 border p-4 border-zinc-500 text-slate-700'>
         <label className='block'>
           <span className={`after:content-['*'] after:ml-0.5 `}>First name</span>
         <input 
