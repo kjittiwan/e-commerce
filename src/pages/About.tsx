@@ -1,5 +1,6 @@
 import ceo from '../images/ceo.png'
 import cs from '../images/customer-service.jpg'
+import { Link } from '../../node_modules/react-router-dom/dist/index';
 
 function About() {
   return (
@@ -71,7 +72,7 @@ function About() {
           <div className='text-xl w-[70%]'>Ask about CLEO products, pricing, stores, or anything else. Our highly trained reps are standing by, ready to help.</div>
           <div className='w-[70%] h-[2px] bg-red-500'></div>
           <div className='flex flex-col md:flex-row items-start md:items-center gap-x-10 gap-y-4'>
-            <button className='bg-black text-white py-3 px-4 rounded-xl flex justify-center items-center font-semibold text-base md:text-lg'>Contact us</button>
+            <Link to={'/contact'} className='bg-black text-white py-3 px-4 rounded-xl flex justify-center items-center font-semibold text-base md:text-lg'>Contact us</Link>
             <div className='font-semibold'>Or call <span className=' underline'>+12 3456 7890</span></div>
           </div>
         </div>
