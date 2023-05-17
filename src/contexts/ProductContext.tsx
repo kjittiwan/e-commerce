@@ -12,6 +12,7 @@ type Products = {
   title: string,
 }[]
 
+
 export const ProductContext = createContext([]);
 
 const ProductProvider = ({ children } : ProductProviderProps) => {
@@ -32,7 +33,7 @@ const ProductProvider = ({ children } : ProductProviderProps) => {
   const [filteredProducts, setFilteredProducts] = useState([])
   const [currentFilter, setCurrentFilter] = useState('all')
   
-  function filterProducts(category: string) {
+  function filterProducts(category) {
     if (category === "all") {
       setFilteredProducts([...products])
     }

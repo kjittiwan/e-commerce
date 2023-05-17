@@ -23,6 +23,7 @@ function Contact() {
         name='firstName'
         id='firstName'
         className='w-full h-6 border-b border-zinc-500 focus:outline-none placeholder:text-sm'
+        required
         />
         </label>
         <label className='block'>
@@ -33,6 +34,7 @@ function Contact() {
         name='lastName'
         id='lastName'
         className='w-full h-6 border-b border-zinc-500 focus:outline-none placeholder:text-sm'
+        required
         />
         </label>
         <label className='block'>
@@ -43,6 +45,7 @@ function Contact() {
           name='email'
           id='email'
           className='w-full h-6 border-b border-zinc-500 focus:outline-none placeholder:text-sm'
+          required
           />
         </label>
         <label className='block'>
@@ -53,6 +56,7 @@ function Contact() {
           name='phone'
           id='phone'
           className='w-full h-6 border-b border-zinc-500 focus:outline-none placeholder:text-sm'
+          required
           />
         </label>
         
@@ -63,6 +67,7 @@ function Contact() {
           name='message'
           id='message'
           className='w-full h-16 border p-2 border-zinc-500 focus:outline-none placeholder:text-sm'
+          required
           />
         </label>
         <button className='self-center border bg-slate-900 text-white w-[60%] py-3'>SUBMIT</button>

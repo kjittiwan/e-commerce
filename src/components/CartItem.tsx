@@ -2,7 +2,21 @@ import { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
 import { Link } from "../../node_modules/react-router-dom/dist/index";
 import { IoMdClose, IoMdAdd, IoMdRemove } from 'react-icons/io'
-function CartItem( { product }) {
+
+type CartItemProps = {
+  product: {
+    category: string
+    description: string
+    id: number
+    image: string
+    price: number
+    title: string
+    amount: number
+  }
+  
+}
+
+function CartItem( { product } : CartItemProps) {
   const { addToCart, decreaseAmount, removeFromCart} = useContext(CartContext)
   const { id, image, title, price, amount } = product
   return (

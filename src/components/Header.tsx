@@ -31,8 +31,9 @@ function Header() {
         <Link to={'/products'} onClick={() => setCurrentFilter("all")}>All products</Link>
       </div>
       <div className="flex items-center gap-x-4 ml-auto font-light">
+        <Link to={'/about'} className='hidden md:block'>About</Link>  
         <Link to={'/contact'} className='hidden md:block'>Contact</Link>
-        <Link to={'/about'} className='hidden md:block'>About</Link>
+        
         <div onClick={() => setIsOpen(true)} className=' text-2xl relative hover:scale-110 transition active:translate-y-1'>
           <BsCart3 />
           <div className={`${cartAmount === 0 ? 'opacity-0' : 'opacity-100'} bg-[#FF0100] flex justify-center items-center w-3.5 h-3.5 rounded-full text-xs text-white absolute -top-1.5  -right-2`}>{cartAmount}</div>  
@@ -46,8 +47,9 @@ function Header() {
           <Link to={'/products'} onClick={() => setCurrentFilter("women's clothing")} className='hover:scale-110'>Women</Link>
           <Link to={'/products'} onClick={() => setCurrentFilter("jewelery")} className='hover:scale-110'>Jewelry</Link>
           <Link to={'/products'} onClick={() => setCurrentFilter("all")} className='hover:scale-110'>Products</Link>
-          <Link to={'/contact'} className='hover:scale-110'>Contact</Link>
           <Link to={'/about'} className='hover:scale-110'>About</Link>  
+          <Link to={'/contact'} className='hover:scale-110'>Contact</Link>
+          
         </div>
       </div>
         

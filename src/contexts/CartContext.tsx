@@ -4,11 +4,15 @@ type CartProviderProps = {
   children: React.ReactNode
 }
 type CartContext = {
+  cart: CartType[]
+  cartAmount: number
+  total: number
   addToCart: (product: CartType, id: number) => void
   removeFromCart: (id: number) => void
   decreaseAmount: (id: number) => void
   getCartAmount: () => void
   getTotal: () => void
+  clearCart: () => void
 }
 type CartType = {
   category: string
@@ -69,7 +73,7 @@ const CartProvider = ({ children } : CartProviderProps) => {
       })
       setCart(newCart)
     }
-    if (cartItem.amount === 1) {
+    if (cartItem?.amount === 1) {
       removeFromCart(id) 
     }
   }
