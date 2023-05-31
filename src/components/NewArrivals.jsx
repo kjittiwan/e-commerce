@@ -23,7 +23,7 @@ function NewArrivals() {
                   <div>$ 39.99</div>
                   <div className="flex items-center gap-x-2">
                     Buy now
-                  < IoMdArrowForward className='text-2xl'/>
+                  < IoMdArrowForward className='text-xl md:text-2xl'/>
                   </div>
                 </Link>
               </div>
