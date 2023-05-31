@@ -25,14 +25,14 @@ function Header() {
       CLEO
       </Link>
       <div className="hidden md:flex font-light  gap-x-4">
-        <Link to={'/products'} onClick={() => setCurrentFilter("men's clothing")}>Men</Link>
-        <Link to={'/products'} onClick={() => setCurrentFilter("women's clothing")}>Women</Link>
-        <Link to={'/products'} onClick={() => setCurrentFilter("jewelery")}>Jewelry</Link>
-        <Link to={'/products'} onClick={() => setCurrentFilter("all")}>All products</Link>
+        <Link to={'/products'} onClick={() => setCurrentFilter("men's clothing")} className='hover:font-semibold'>Men</Link>
+        <Link to={'/products'} onClick={() => setCurrentFilter("women's clothing")} className='hover:font-semibold'>Women</Link>
+        <Link to={'/products'} onClick={() => setCurrentFilter("jewelery")} className='hover:font-semibold'>Jewelry</Link>
+        <Link to={'/products'} onClick={() => setCurrentFilter("all")} className='hover:font-semibold'>All products</Link>
       </div>
       <div className="flex items-center gap-x-4 ml-auto font-light">
-        <Link to={'/about'} className='hidden md:block'>About</Link>  
-        <Link to={'/contact'} className='hidden md:block'>Contact</Link>
+        <Link to={'/about'} className='hover:font-semibold'>About</Link>  
+        <Link to={'/contact'} className='hover:font-semibold'>Contact</Link>
         
         <div onClick={() => setIsOpen(true)} className=' text-2xl relative hover:scale-110 transition active:translate-y-1'>
           <BsCart3 />
